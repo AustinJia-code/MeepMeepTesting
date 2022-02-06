@@ -33,7 +33,7 @@ public class RedSide {
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-36, -70, Math.toRadians(90)))
-                                .splineTo(new Vector2d(-24, -25.5), Math.toRadians(90))
+                                .splineTo(new Vector2d(-31, -25.5), Math.toRadians(90))
                                 .turn(Math.toRadians(90))
 
 
@@ -44,7 +44,7 @@ public class RedSide {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(-24, -25.5, Math.toRadians(0)))
+                        drive.trajectorySequenceBuilder(new Pose2d(-31, -25.5, Math.toRadians(-180)))
                                 .splineTo(new Vector2d(-60, -65), Math.toRadians(-180))
 
 
@@ -79,7 +79,7 @@ public class RedSide {
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-50, -68, Math.toRadians(-90)))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(-24,-24),Math.toRadians(0))
+                                .splineTo(new Vector2d(-29,-24),Math.toRadians(0))
 
                                 .build()
                 );
@@ -130,7 +130,7 @@ public class RedSide {
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(11, -70, Math.toRadians(90)))
-                                .splineTo(new Vector2d(-4, -31), Math.toRadians(90))
+                                .splineTo(new Vector2d(1, -35.5), Math.toRadians(90))
                                 .turn(Math.toRadians(-135))
 
                                 .build()
@@ -139,7 +139,7 @@ public class RedSide {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(-4, -31, Math.toRadians(-45)))
+                        drive.trajectorySequenceBuilder(new Pose2d(1, -35.5, Math.toRadians(-45)))
                                 .splineTo(new Vector2d(55, -63), Math.toRadians(0))
 
 
@@ -151,7 +151,7 @@ public class RedSide {
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(55, -63, Math.toRadians(0)))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(-4, -31), Math.toRadians(135))
+                                .splineTo(new Vector2d(1, -35.5), Math.toRadians(135))
 
 
                                 .build()
@@ -163,17 +163,17 @@ public class RedSide {
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
 
-               //.addEntity(redLeft)
-               // .addEntity(redLeft1)
-               // .addEntity(redLeft2)
-               // .addEntity(redLeft3)
-               // .addEntity(redLeft4)
-               // .addEntity(redLeft5)
-               // .addEntity(redLeft6)
-               .addEntity(redRight)
-                //.addEntity(redRight1)
-                //.addEntity(redRight2)
-                //.addEntity(redRight3)
+               .addEntity(redLeft)
+              //  .addEntity(redLeft1)
+            //   .addEntity(redLeft2)
+            //   .addEntity(redLeft3)
+             //  .addEntity(redLeft4)
+             //  .addEntity(redLeft5)
+            //   .addEntity(redLeft6)
+               //.addEntity(redRight)
+               // .addEntity(redRight1)
+              //  .addEntity(redRight2)
+               // .addEntity(redRight3)
                 .start();
     }
 }
