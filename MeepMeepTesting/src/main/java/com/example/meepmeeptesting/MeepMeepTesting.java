@@ -153,45 +153,48 @@ public class MeepMeepTesting {
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(11, -64, Math.toRadians(90)))
                                 //.splineToLinearHeading(new Pose2d(-5,-43,Math.toRadians(-70)),Math.toRadians(-70))
-                                .splineTo(new Vector2d(-4, -45), Math.toRadians(30))
-                                .turn(Math.toRadians(-90))
+                                //.splineTo(new Vector2d(-4, -45), Math.toRadians(30))
+                                .splineTo(new Vector2d(-4, -46), Math.toRadians(90))
+                                .turn(Math.toRadians(-155))
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(27)
+                                .forward(26)
+
                                 .setReversed(true)
-                                .back(27)
+                                .back(26)
                                 .splineTo(new Vector2d(-5,-43),Math.toRadians(110))
                                 .setReversed(false)
 
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(27)
+                                .forward(28)
+
                                 .setReversed(true)
-                                .back(27)
+                                .back(28)
                                 .splineTo(new Vector2d(-5,-43),Math.toRadians(110))
                                 .setReversed(false)
 
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(27)
+                                .forward(30)
                                 .setReversed(true)
-                                .back(27)
+                                .back(30)
                                 .splineTo(new Vector2d(-5,-43),Math.toRadians(110))
                                 .setReversed(false)
 
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(27)
+                                .forward(32)
                                 .setReversed(true)
-                                .back(27)
+                                .back(32)
                                 .splineTo(new Vector2d(-5,-43),Math.toRadians(110))
                                 .setReversed(false)
 
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(27)
+                                .forward(34)
                                 .setReversed(true)
-                                .back(27)
+                                .back(34)
                                 .splineTo(new Vector2d(-5,-43),Math.toRadians(110))
                                 .setReversed(false)
 
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
-                                .forward(17)
+                                .forward(18)
 
                                 .build());
 
