@@ -154,7 +154,7 @@ public class MeepMeepTesting {
                         drive.trajectorySequenceBuilder(new Pose2d(11, -64, Math.toRadians(90)))
                                 //.splineToLinearHeading(new Pose2d(-5,-43,Math.toRadians(-70)),Math.toRadians(-70))
                                 //.splineTo(new Vector2d(-4, -45), Math.toRadians(30))
-                                .splineTo(new Vector2d(-4, -46), Math.toRadians(90))
+                                .splineTo(new Vector2d(-4, -48), Math.toRadians(90))
                                 .turn(Math.toRadians(-155))
                                 .splineTo(new Vector2d(20,-58), Math.toRadians(0))
                                 .forward(26)
