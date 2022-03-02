@@ -298,8 +298,9 @@ public class RedSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-.addEntity(redRightCycle1)
-                .addEntity(redRightCycle2)
+//.addEntity(redRightCycle1)
+  //              .addEntity(redRightCycle2)
+   // .addEntity(redRightSafeTSE2)
 
                 .start();
     }
