@@ -8,22 +8,31 @@ import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
 
 public class RedSide {
     public static void main(String[] args) {
+        Vector2d hub = new Vector2d(-23,-35);
+
         MeepMeep meepMeep = new MeepMeep(500);
         RoadRunnerBotEntity redLeft = new DefaultBotBuilder(meepMeep)
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
-                .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
+                .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 11.2)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(-36, -70, Math.toRadians(90)))
-                                .splineTo(new Vector2d(-24, -25.5), Math.toRadians(90))
+                        drive.trajectorySequenceBuilder(new Pose2d(-36, -63, Math.toRadians(90)))
+                                .splineTo(new Vector2d(-28,-24), Math.toRadians(0))
+                                //.turn(Math.toRadians(-45))
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-60, -65),Math.toRadians(215))//go to ducc
+                                .setReversed(false)
+                                //.turn(Math.toRadians(-10))//get better angle to ducc
                                 .turn(Math.toRadians(90))
-                                .turn(Math.toRadians(80))
-                                .splineTo(new Vector2d(-60, -65), Math.toRadians(-180))
+                                .lineTo(new Vector2d(-50, -65))//strafe ducc
+                                //.setReversed(true)
+                                .turn(Math.toRadians(-35))
+                                .splineTo(hub,Math.toRadians(45))
+                                //.lineTo(new Vector2d(-50,-68)) //assuming where duck is
+                                //.setReversed(true)
+                                //.lineTo(new Vector2d(-28,-31.5))
+                                //.turn(Math.toRadians(-45))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(-52, -55),Math.toRadians(-270))
-                                .lineTo(new Vector2d(-50,-68)) //assuming where duck is
-                                .setReversed(true)
-                                .splineTo(new Vector2d(-24,-24),Math.toRadians(0))
-                                .lineTo(new Vector2d(-61,-35))
+                                .splineTo(new Vector2d(-61,-35),Math.toRadians(180))
 
 
                                 .build()
@@ -209,7 +218,7 @@ public class RedSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-.addEntity(redRight1)
+.addEntity(redLeft)
   //              .addEntity(redRightCycle2)
    // .addEntity(redRightSafeTSE2)
 
