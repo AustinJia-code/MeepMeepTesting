@@ -16,23 +16,24 @@ public class RedSide {
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 11.2)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-36, -63, Math.toRadians(90)))
-                                .splineTo(new Vector2d(-28,-24), Math.toRadians(0))
+                                .splineTo(new Vector2d(-32,-24), Math.toRadians(0))
                                 //.turn(Math.toRadians(-45))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(-60, -65),Math.toRadians(215))//go to ducc
+                                .splineTo(new Vector2d(-60, -60),Math.toRadians(215))//go to ducc
                                 .setReversed(false)
                                 //.turn(Math.toRadians(-10))//get better angle to ducc
-                                .turn(Math.toRadians(90))
-                                .lineTo(new Vector2d(-50, -65))//strafe ducc
-                                //.setReversed(true)
-                                .turn(Math.toRadians(-35))
-                                .splineTo(hub,Math.toRadians(45))
-                                //.lineTo(new Vector2d(-50,-68)) //assuming where duck is
-                                //.setReversed(true)
-                                //.lineTo(new Vector2d(-28,-31.5))
-                                //.turn(Math.toRadians(-45))
+                                .turn(Math.toRadians(55))
+                                //.turn(Math.toRadians(-10))//get better angle to ducc
+                                // .turn(Math.toRadians(0))
+                                // .lineTo(new Vector2d(-40, -62))//strafe ducc
+                                .strafeRight(20)
+                                .turn(Math.toRadians(-17))
+                                // .setAccelConstraint((a,e,c,d)->7)
+                                .lineTo(new Vector2d(-60,-62))
+                                .turn(Math.toRadians(17))
+                                .splineTo(new Vector2d(-33, -24), Math.toRadians(0))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(-61,-35),Math.toRadians(180))
+                                .splineTo(new Vector2d(-65,-37),Math.toRadians(180))
 
 
                                 .build()
@@ -105,15 +106,13 @@ public class RedSide {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d())
-                              /*  .back(3)
-                                .strafeLeft(21)
-                                .back(16)
-                                .forward(14)
-                                .strafeRight(48.5)
-                                .back(17)
-                                .strafeRight(2)*/
-                                .strafeRight(15)
+                        drive.trajectorySequenceBuilder(new Pose2d(5,-42, Math.toRadians(130)))
+                                .setReversed(true)
+                                .splineTo(new Vector2d(9,-67), Math.toRadians(0))
+                                .setReversed(false)
+                                .back(40)
+                                .forward(45)
+                                .splineTo(new Vector2d(5,-42), Math.toRadians(130))
 
 
                                 .build()
@@ -218,7 +217,7 @@ public class RedSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-.addEntity(redLeft)
+.addEntity(test)
   //              .addEntity(redRightCycle2)
    // .addEntity(redRightSafeTSE2)
 
