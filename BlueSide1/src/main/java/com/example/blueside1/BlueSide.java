@@ -33,7 +33,22 @@ public class BlueSide {
                                 .build()
                 );
 
+        RoadRunnerBotEntity blueLeftSmallBot = new DefaultBotBuilder(meepMeep)
+                // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
+                .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
+                .followTrajectorySequence(drive ->
+                        drive.trajectorySequenceBuilder(new Pose2d(11,63, Math.toRadians(-90)))
+                                .splineTo(new Vector2d(2,36), Math.toRadians(-130))
+                                .setReversed(true)
+                                .splineTo(new Vector2d(14,64), Math.toRadians(0))
+                                .strafeRight(4.3)
+                                .setReversed(false)
+                                .back(35)
+                                .forward(30)
+                                .splineTo(new Vector2d(-3,42), Math.toRadians(-118))
 
+                                .build()
+                );
 
 
 
@@ -206,7 +221,7 @@ public class BlueSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-                .addEntity(blueRightSmallBot)
+                .addEntity(blueLeftSmallBot)
                //.addEntity(blueLeft1)
               //  .addEntity(blueLeft2)
                // .addEntity(blueLeft3)
