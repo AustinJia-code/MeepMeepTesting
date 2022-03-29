@@ -107,14 +107,14 @@ public class RedSide {
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(11,-63, Math.toRadians(90)))
-                                .splineTo(new Vector2d(2,-36), Math.toRadians(130))
+                                .splineTo(new Vector2d(2,-36), Math.toRadians(125))
                                 .setReversed(true)
                                 .splineTo(new Vector2d(14,-64), Math.toRadians(0))
                                 .strafeLeft(4.3)
                                 .setReversed(false)
                                 .back(35)
                                 .forward(30)
-                                .splineTo(new Vector2d(-3,-42), Math.toRadians(118))
+                                .splineTo(new Vector2d(-1,-45), Math.toRadians(115))
 
                                 .build()
                 );
