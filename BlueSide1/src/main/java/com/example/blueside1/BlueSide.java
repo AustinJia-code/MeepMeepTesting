@@ -16,15 +16,10 @@ public class BlueSide {
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-36, 63, Math.toRadians(-90)))
                                 .splineTo(new Vector2d(-28,24), Math.toRadians(0))
-                                //.turn(Math.toRadians(-45))
                                 .setReversed(true)
                                 .splineTo(new Vector2d(-60, 60),Math.toRadians(-215))//go to ducc
                                 .setReversed(false)
-                                //.turn(Math.toRadians(-10))//get better angle to ducc
                                 .turn(Math.toRadians(-55))
-                                //.turn(Math.toRadians(-10))//get better angle to ducc
-                                // .turn(Math.toRadians(0))
-                                // .lineTo(new Vector2d(-40, -62))//strafe ducc
                                 .strafeLeft(20)
                                 .turn(Math.toRadians(17))
                                 // .setAccelConstraint((a,e,c,d)->7)

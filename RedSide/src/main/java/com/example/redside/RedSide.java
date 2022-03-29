@@ -113,8 +113,8 @@ public class RedSide {
                                 .strafeLeft(4.3)
                                 .setReversed(false)
                                 .back(35)
-                                .forward(40)
-                                .splineTo(new Vector2d(4,-41), Math.toRadians(135))
+                                .forward(30)
+                                .splineTo(new Vector2d(-2.5,-40), Math.toRadians(115))
 
                                 .build()
                 );
@@ -221,7 +221,7 @@ public class RedSide {
 //.addEntity(redRightSmallBot)
   //              .addEntity(redRightCycle2)
    // .addEntity(redRightSafeTSE2)
-                .addEntity(redLeft)
+                .addEntity(redRightSmallBot)
 
 
                 .start();
