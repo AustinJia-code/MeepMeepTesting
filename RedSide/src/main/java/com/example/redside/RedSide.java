@@ -114,7 +114,7 @@ public class RedSide {
                                 .setReversed(false)
                                 .back(35)
                                 .forward(30)
-                                .splineTo(new Vector2d(-2.5,-40), Math.toRadians(115))
+                                .splineTo(new Vector2d(-3,-42), Math.toRadians(118))
 
                                 .build()
                 );
