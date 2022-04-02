@@ -44,6 +44,7 @@ public class BlueSide {
                                 .setReversed(false)
                                 .back(35)
                                 .forward(30)
+                                .splineToConstantHeading(new Vector2d(7,55),Math.toRadians(0))
                                 .splineTo(new Vector2d(-1,45), Math.toRadians(-115))
 
                                 .build()
