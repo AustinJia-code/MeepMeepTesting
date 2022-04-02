@@ -40,7 +40,7 @@ public class BlueSide {
                         drive.trajectorySequenceBuilder(new Pose2d(11,63, Math.toRadians(-90)))
                                 .splineTo(new Vector2d(0,36), Math.toRadians(-120))
                                 .setReversed(true)
-                                .splineToSplineHeading(new Pose2d(14,63,Math.toRadians(180)), Math.toRadians(-125))
+                                .splineToSplineHeading(new Pose2d(14,63,Math.toRadians(180)), Math.toRadians(60))
                                 .setReversed(false)
                                 .back(35)
                                 .forward(30)
