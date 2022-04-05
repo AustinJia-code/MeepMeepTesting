@@ -38,7 +38,8 @@ public class BlueSide {
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(11,63, Math.toRadians(-90)))
-                                .splineTo(new Vector2d(0,36), Math.toRadians(-120))
+                               // .splineTo(new Vector2d(0,36), Math.toRadians(-120))
+                                .splineToSplineHeading(new Pose2d(14,65,Math.toRadians(180)), Math.toRadians(60))
                                 .setReversed(true)
                                 .splineToSplineHeading(new Pose2d(14,63,Math.toRadians(180)), Math.toRadians(60))
                                 .setReversed(false)
@@ -46,6 +47,25 @@ public class BlueSide {
                                 .forward(30)
                                 .splineToConstantHeading(new Vector2d(7,55),Math.toRadians(0))
                                 .splineTo(new Vector2d(-1,45), Math.toRadians(-115))
+
+                                .build()
+                );
+
+        RoadRunnerBotEntity blueLeftHelp = new DefaultBotBuilder(meepMeep)
+                .setConstraints(71, 43, Math.toRadians(180), Math.toRadians(180), 11.2)
+                .followTrajectorySequence(drive ->
+                        drive.trajectorySequenceBuilder(new Pose2d(11,63, Math.toRadians(-90)))
+                                .splineTo(new Vector2d(1,35), Math.toRadians(-145))
+                                .setReversed(true)
+                                .splineToSplineHeading(new Pose2d(11,64.5,Math.toRadians(180)), Math.toRadians(60))
+                                .setReversed(true)
+                                .splineToSplineHeading(new Pose2d(46, 65.5,Math.toRadians(160)), Math.toRadians(180))
+                                //.setReversed(true)
+                                .setAccelConstraint((a,e,c,d) -> 15)
+                                .splineToConstantHeading(new Vector2d(50, 63), Math.toRadians(180))
+                                .setAccelConstraint((a,e,c,d) -> 43)
+                                .setReversed(true)
+                                .splineToConstantHeading(new Vector2d(11, 64.5), Math.toRadians(180))
 
                                 .build()
                 );
@@ -221,7 +241,7 @@ public class BlueSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-                .addEntity(blueLeftSmallBot)
+                .addEntity(blueLeftHelp)
                //.addEntity(blueLeft1)
               //  .addEntity(blueLeft2)
                // .addEntity(blueLeft3)

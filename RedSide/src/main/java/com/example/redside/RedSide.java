@@ -106,10 +106,10 @@ public class RedSide {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(11,-63, Math.toRadians(90)))
-                                .splineTo(new Vector2d(2,-36), Math.toRadians(125))
+                        drive.trajectorySequenceBuilder(new Pose2d(-3.8, 41, Math.toRadians(-115)))
+                                //.splineTo(new Vector2d(2,-36), Math.toRadians(125))
                                 .setReversed(true)
-                                .splineTo(new Vector2d(14,-64), Math.toRadians(0))
+                                .splineTo(new Vector2d(45,68), Math.toRadians(0))
                                 .strafeLeft(4.3)
                                 .setReversed(false)
                                 .back(35)
