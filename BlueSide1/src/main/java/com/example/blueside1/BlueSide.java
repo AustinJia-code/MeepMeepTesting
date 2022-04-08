@@ -58,14 +58,18 @@ public class BlueSide {
                                 .splineTo(new Vector2d(1,35), Math.toRadians(-145))
                                 .setReversed(true)
                                 .splineToSplineHeading(new Pose2d(11,64.5,Math.toRadians(180)), Math.toRadians(60))
-                                .setReversed(true)
+                                .back(27)
+                                .splineTo(new Vector2d(46,60), Math.toRadians(-25))
+                                .setReversed(false)
+                                .splineTo(new Vector2d(40,64), Math.toRadians(180))
+                                /*.setReversed(true)
                                 .splineToSplineHeading(new Pose2d(46, 65.5,Math.toRadians(160)), Math.toRadians(180))
                                 //.setReversed(true)
                                 .setAccelConstraint((a,e,c,d) -> 15)
                                 .splineToConstantHeading(new Vector2d(50, 63), Math.toRadians(180))
                                 .setAccelConstraint((a,e,c,d) -> 43)
                                 .setReversed(true)
-                                .splineToConstantHeading(new Vector2d(11, 64.5), Math.toRadians(180))
+                                .splineToConstantHeading(new Vector2d(11, 64.5), Math.toRadians(180))*/
 
                                 .build()
                 );

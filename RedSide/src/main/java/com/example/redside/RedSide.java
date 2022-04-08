@@ -106,15 +106,58 @@ public class RedSide {
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
                 .setConstraints(50, 30, Math.toRadians(180), Math.toRadians(180), 18.5)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(-3.8, 41, Math.toRadians(-115)))
-                                //.splineTo(new Vector2d(2,-36), Math.toRadians(125))
+                        drive.trajectorySequenceBuilder(new Pose2d(11, -63, Math.toRadians(90)))
+                                .splineTo(new Vector2d(1,-35.53), Math.toRadians(145))
+
+
+
+
                                 .setReversed(true)
-                                .splineTo(new Vector2d(45,68), Math.toRadians(0))
-                                .strafeLeft(4.3)
+                                .splineToSplineHeading(new Pose2d(11,-64.7,Math.toRadians(-180)), Math.toRadians(-60))
                                 .setReversed(false)
-                                .back(35)
-                                .forward(30)
-                                .splineTo(new Vector2d(-1,-45), Math.toRadians(115))
+                                .back(33)
+
+                                .forward(28)
+                                .splineTo(new Vector2d(-3.8, -42), Math.toRadians(115))
+
+                                .setReversed(true)
+                                .splineToSplineHeading(new Pose2d(11,-65.5,Math.toRadians(-180)), Math.toRadians(-60))
+                                .strafeLeft(1)
+                                .setReversed(false)
+                                .back(37)
+
+
+                                .forward(32)
+                                .splineTo(new Vector2d(-3.4, -44.5), Math.toRadians(107.5))
+
+
+                                .setReversed(true)
+                                //.splineTo(new Vector2d(12.5, 64), Math.toRadians(0))
+                                //.strafeRight(3.5)
+                                .splineToSplineHeading(new Pose2d(4,-65.5,Math.toRadians(-180)), Math.toRadians(-60))
+                                .strafeLeft(1.3)
+                                .setReversed(false)
+                                .back(37)//40
+                                //Wiggle
+                                .lineTo(new Vector2d(52,-64))
+                                .lineTo(new Vector2d(41,-66.5))
+
+
+                                .forward(22)
+                                .splineTo(new Vector2d(2, -48.2), Math.toRadians(109))
+
+                                .setReversed(true)
+                                .setVelConstraint((a,e,c,d)->70)
+                                .setAccelConstraint((a,e,c,d)->90)
+                                .splineTo(new Vector2d(50,-68), Math.toRadians(0))
+
+
+
+
+
+
+
+
 
                                 .build()
                 );
