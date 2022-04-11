@@ -178,9 +178,7 @@ public class BlueSide {
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-36, 63, Math.toRadians(-90)))
                                 .setAccelConstraint((a,e,c,d)->25)
-                                .lineTo(new Vector2d(-24, 41))
-                                .turn(Math.toRadians(195))
-
+                                .splineTo(new Vector2d(-26,35.5), Math.toRadians(-45))
 
                                 .build()
                 );
@@ -245,7 +243,7 @@ public class BlueSide {
         meepMeep.setBackground(MeepMeep.Background.FIELD_FREIGHTFRENZY_ADI_DARK)
                 .setDarkMode(true)
                 .setBackgroundAlpha(0.95f)
-                .addEntity(blueLeftHelp)
+               // .addEntity(blueLeftHelp)
                //.addEntity(blueLeft1)
               //  .addEntity(blueLeft2)
                // .addEntity(blueLeft3)
@@ -255,8 +253,7 @@ public class BlueSide {
                // .addEntity(blueLeft7)
 
 
-
-                //.addEntity(blueRight1)
+                .addEntity(blueRight1)
                 //.addEntity(blueRight2)
                 //.addEntity(blueRight3)
                 //.addEntity(blueRight4)
