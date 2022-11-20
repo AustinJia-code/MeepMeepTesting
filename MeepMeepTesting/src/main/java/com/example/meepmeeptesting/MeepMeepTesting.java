@@ -17,63 +17,20 @@ public class MeepMeepTesting {
                 .setDimensions(13.44, 14.8)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(35, -62.5, Math.toRadians(-90)))
+
                                 //score preload
-                                .setReversed(true)
                                 .back(34)
                                 .splineTo(new Vector2d(31,-7), Math.toRadians(135))
 
                                 //go to storage
                                 .setReversed(false)
-                                .splineTo(new Vector2d(51.5,-12), Math.toRadians(0))
-                                .forward(8.5)
+                                .splineTo(new Vector2d(56,-12), Math.toRadians(0))
+                                .lineToLinearHeading(new Pose2d(58, -12, Math.toRadians(0)))
 
                                 //go to pole
                                 .setReversed(true)
-                                .back(8.5)
+                                //.back(8.5)
                                 .splineTo(new Vector2d(31,-7), Math.toRadians(135))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(51.5,-12), Math.toRadians(0))
-                                .forward(8.5)
-
-                                //go to pole
-                                .setReversed(true)
-                                .back(8.5)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(51.5,-12), Math.toRadians(0))
-                                .forward(8.5)
-
-                                //go to pole
-                                .setReversed(true)
-                                .back(8.5)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(51.5,-12), Math.toRadians(0))
-                                .forward(8.5)
-
-                                //go to pole
-                                .setReversed(true)
-                                .back(8.5)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(51.5,-12), Math.toRadians(0))
-                                .forward(8.5)
-
-                                //go to pole
-                                .setReversed(true)
-                                .back(8.5)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
-
-                                //park
-                                .lineToLinearHeading(new Pose2d(36,-12, Math.toRadians(-90)))
 
                                 //build
                                 .build());
