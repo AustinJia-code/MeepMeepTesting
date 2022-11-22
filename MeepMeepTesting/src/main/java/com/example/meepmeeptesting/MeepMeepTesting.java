@@ -1,5 +1,7 @@
 package com.example.meepmeeptesting;
 
+import static java.lang.Math.toRadians;
+
 import com.acmerobotics.roadrunner.geometry.Pose2d;
 import com.acmerobotics.roadrunner.geometry.Vector2d;
 import com.acmerobotics.roadrunner.trajectory.Trajectory;
@@ -31,6 +33,10 @@ public class MeepMeepTesting {
                                 .setReversed(true)
                                 //.back(8.5)
                                 .splineTo(new Vector2d(31,-7), Math.toRadians(135))
+
+                                .waitSeconds(1)
+                                .setReversed(false)
+                                .splineTo(new Vector2d(35, -35), Math.toRadians(-90))
 
                                 //build
                                 .build());
