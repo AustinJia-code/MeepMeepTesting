@@ -21,8 +21,10 @@ public class MeepMeepTesting {
                         drive.trajectorySequenceBuilder(new Pose2d(35, -62.5, Math.toRadians(-90)))
 
                                 //score preload
-                                .back(10)
-                                .splineTo(new Vector2d(32,-24), Math.toRadians(180))
+                                .lineToLinearHeading(new Pose2d(33,-15, Math.toRadians(40)))
+                                .back(3)
+                                //.splineTo(new Vector2d(32,-24), Math.toRadians(180))
+
 
                                 //go to storage
                                 .setReversed(false)
