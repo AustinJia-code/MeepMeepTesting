@@ -9,7 +9,7 @@ import com.noahbres.meepmeep.MeepMeep;
 import com.noahbres.meepmeep.roadrunner.DefaultBotBuilder;
 import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
 
-public class MeepMeepTesting {
+public class MeepMeepMid {
     public static void main(String[] args) {
         MeepMeep meepMeep = new MeepMeep(600);
 
@@ -74,7 +74,68 @@ public class MeepMeepTesting {
                                 .setReversed(false)
                                 .splineTo(new Vector2d(35, -35), Math.toRadians(-90))
 
+                                //build
+                                .build());
 
+        RoadRunnerBotEntity trajMirror = new DefaultBotBuilder(meepMeep)
+                // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
+                .setConstraints(45, 35, 5,4, 13)
+                .setDimensions(13.44, 14.8)
+                .followTrajectorySequence(drive ->
+                        drive.trajectorySequenceBuilder(new Pose2d(-35, -62.5, Math.toRadians(-90)))
+
+                                //score preload
+                                .lineToLinearHeading(new Pose2d(-33,-15, Math.toRadians(140)))
+                                .back(3)
+                                //.splineTo(new Vector2d(32,-24), Math.toRadians(180))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
+                                .forward(12)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
+                                .forward(12)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
+                                .forward(12)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
+                                .forward(12)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
+                                .forward(12)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
+
+                                .setReversed(false)
+                                .splineTo(new Vector2d(-35, -35), Math.toRadians(-90))
 
                                 //build
                                 .build());
@@ -84,6 +145,7 @@ public class MeepMeepTesting {
                 .setBackgroundAlpha(0.95f)
                // .addEntity(redRightSafeTSE2)
            .addEntity(traj)
+            .addEntity(trajMirror)
             .start();
     }
 }
