@@ -25,43 +25,6 @@ public class MeepMeepMid {
                                 .back(3)
                                 //.splineTo(new Vector2d(32,-24), Math.toRadians(180))
 
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(48,-12), Math.toRadians(0))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(30,-18), Math.toRadians(-140))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(48,-12), Math.toRadians(0))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(30,-18), Math.toRadians(-140))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(48,-12), Math.toRadians(0))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(30,-18), Math.toRadians(-140))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(48,-12), Math.toRadians(0))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(30,-18), Math.toRadians(-140))
-
                                 //go to storage
                                 .setReversed(false)
                                 .splineTo(new Vector2d(48,-12), Math.toRadians(0))
@@ -88,42 +51,6 @@ public class MeepMeepMid {
                                 .lineToLinearHeading(new Pose2d(-33,-15, Math.toRadians(140)))
                                 .back(3)
                                 //.splineTo(new Vector2d(32,-24), Math.toRadians(180))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
-
-                                //go to storage
-                                .setReversed(false)
-                                .splineTo(new Vector2d(-48,-12), Math.toRadians(180))
-                                .forward(12)
-
-                                //go to pole
-                                .setReversed(true)
-                                .splineTo(new Vector2d(-30,-18), Math.toRadians(-40))
 
                                 //go to storage
                                 .setReversed(false)
