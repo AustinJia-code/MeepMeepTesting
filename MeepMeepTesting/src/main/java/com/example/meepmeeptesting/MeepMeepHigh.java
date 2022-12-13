@@ -69,7 +69,7 @@ public class MeepMeepHigh {
                                 .splineTo(new Vector2d(-35, -20), Math.toRadians(270))
                                 .forward(15)
 
-                                .splineToConstantHeading(new Vector2d(-11, -35), Math.toRadians(270))
+                                .splineToConstantHeading(new Vector2d(-11, -35), Math.toRadians(-90))
                                 //build
                                 .build());
 
