@@ -22,7 +22,7 @@ public class MeepMeepHigh {
 
                                 //score preload
                                 .back(34)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
+                                .splineTo(new Vector2d(28,-7), Math.toRadians(120))
 
                                 //go to storage
                                 .setReversed(false)
@@ -31,21 +31,23 @@ public class MeepMeepHigh {
 
                                 //go to pole
                                 .setReversed(true)
-                                //.back(8.5)
-                                .splineTo(new Vector2d(31,-7), Math.toRadians(135))
+                                .splineTo(new Vector2d(35,-7), Math.toRadians(150))
+                                .back(4)
 
+                                //Bark Mid
                                 .waitSeconds(1)
                                 .setReversed(false)
-                                .splineTo(new Vector2d(35, -20), Math.toRadians(-90))
-                                .forward(15)
+                                .lineToLinearHeading(new Pose2d(35, -12, Math.toRadians(0)))
 
-                                .splineToConstantHeading(new Vector2d(11, -35), Math.toRadians(-90))
+                                //Bark Left
+                                .back(24)
+
                                 //build
                                 .build());
 
         RoadRunnerBotEntity trajMirror = new DefaultBotBuilder(meepMeep)
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
-                .setConstraints(45, 35, 5,4, 13)
+                .setConstraints(45, 30, 5,4, 13)
                 .setDimensions(13.44, 14.8)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(-35, -62.5, Math.toRadians(-90)))
