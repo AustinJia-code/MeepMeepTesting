@@ -90,7 +90,9 @@ public class MeepMeepMid {
                         drive.trajectorySequenceBuilder(new Pose2d(-35.5, -62.5, Math.toRadians(-90)))
 
                                 //score preload
-                                .back(39)
+                                .back(45)
+                                .turn(Math.toRadians(-60))
+                                .setReversed(true)
                                 .splineTo(new Vector2d(-6.5,-18.75), Math.toRadians(-35))
 
                                 //go to storage + 1

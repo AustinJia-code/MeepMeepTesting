@@ -18,7 +18,7 @@ public class MeepMeepHigh {
                 .setConstraints(45, 30, 5,4, 13)
                 .setDimensions(13.44, 14.8)
                 .followTrajectorySequence(drive ->
-                        drive.trajectorySequenceBuilder(new Pose2d(35, -62.5, Math.toRadians(-90)))
+                        drive.trajectorySequenceBuilder(new Pose2d(36, -62.5, Math.toRadians(-90)))
 
                                 //score preload
                                 .back(34)
@@ -27,7 +27,7 @@ public class MeepMeepHigh {
                                 //go to storage
                                 .setReversed(false)
                                 .splineTo(new Vector2d(56,-12), Math.toRadians(0))
-                                .lineToLinearHeading(new Pose2d(58, -12, Math.toRadians(0)))
+                                .forward(2)
 
                                 //go to pole
                                 .setReversed(true)
