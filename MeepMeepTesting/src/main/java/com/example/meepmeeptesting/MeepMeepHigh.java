@@ -21,6 +21,7 @@ public class MeepMeepHigh {
                         drive.trajectorySequenceBuilder(new Pose2d(36, -62.5, Math.toRadians(-90)))
 
                                 //score preload
+                                .setReversed(true)
                                 .back(34)
                                 .splineTo(new Vector2d(28,-7), Math.toRadians(120))
 
