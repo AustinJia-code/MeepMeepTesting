@@ -15,7 +15,7 @@ public class MeepMeepHigh {
 
         RoadRunnerBotEntity traj = new DefaultBotBuilder(meepMeep)
                 // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
-                .setConstraints(45, 30, 5,4, 13)
+                .setConstraints(80, 80, 5,4, 13)
                 .setDimensions(13.44, 14.8)
                 .followTrajectorySequence(drive ->
                         drive.trajectorySequenceBuilder(new Pose2d(36, -62.5, Math.toRadians(-90)))
@@ -24,6 +24,46 @@ public class MeepMeepHigh {
                                 .setReversed(true)
                                 .back(34)
                                 .splineTo(new Vector2d(28,-7), Math.toRadians(120))
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(56,-12), Math.toRadians(0))
+                                .forward(2)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(35,-7), Math.toRadians(150))
+                                .back(4)
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(56,-12), Math.toRadians(0))
+                                .forward(2)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(35,-7), Math.toRadians(150))
+                                .back(4)
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(56,-12), Math.toRadians(0))
+                                .forward(2)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(35,-7), Math.toRadians(150))
+                                .back(4)
+
+                                //go to storage
+                                .setReversed(false)
+                                .splineTo(new Vector2d(56,-12), Math.toRadians(0))
+                                .forward(2)
+
+                                //go to pole
+                                .setReversed(true)
+                                .splineTo(new Vector2d(35,-7), Math.toRadians(150))
+                                .back(4)
 
                                 //go to storage
                                 .setReversed(false)
